@@ -1,0 +1,7 @@
+output_display.c:53:13:display7SEG	16	static
+output_display.c:66:6:update7Seg	16	static
+output_display.c:78:6:Increase_time	16	static
+output_display.c:87:6:Set_time	16	static
+output_display.c:106:6:display_LED	24	static
+output_display.c:119:6:assign	8	static
+output_display.c:142:6:count_down	8	static
