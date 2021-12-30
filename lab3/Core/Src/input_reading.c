@@ -37,7 +37,7 @@ static uint16_t counterForButtonPress[number_of_button]={0,0,0};
 void button_reading(int select_button)
 {
 
-	//select_button%=3;
+	//Debouncing method
 
 	button_state1[select_button] = button_state2[select_button];
 
