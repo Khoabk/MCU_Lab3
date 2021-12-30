@@ -24,10 +24,10 @@ void fsm_for_input_processing(void)
 {
 
         if(timer_flag[0])
-		{
-			set_Timer(0);
-			update7Seg(prev_mode);
-		}
+	{
+		set_Timer(0);
+		update7Seg(prev_mode);
+	}
 
 
 	switch(current_state)
@@ -42,8 +42,6 @@ void fsm_for_input_processing(void)
 			count_down();
 		}
 
-
-
 		if(is_button_pressed(0))
 		{
 			set_Timer(1);
@@ -54,14 +52,10 @@ void fsm_for_input_processing(void)
 			return;
 		}
 
-
-
 		if(is_button_pressed(2))
 		{
 			assign();
 		}
-
-
 
 		return;
 	}
@@ -69,14 +63,12 @@ void fsm_for_input_processing(void)
 	case MODE2:
 	case MODE3:
 	{
-
-
+		
 		if(timer_flag[1])
 		{
 			set_Timer(1);
 			GPIOA->ODR ^= (0x1249<<prev_mode);
 		}
-
 
 		if(is_button_pressed(0))
 		{
@@ -87,7 +79,6 @@ void fsm_for_input_processing(void)
 			return;
 		}
 
-
 		if(is_button_pressed(1))
 		{
 			reset(1);
@@ -95,7 +86,6 @@ void fsm_for_input_processing(void)
 			incre_flag=1;
 			return;
 		}
-
 
 		if(is_button_pressed(2))
 		{
@@ -109,8 +99,6 @@ void fsm_for_input_processing(void)
 	}
 	case INCREMENT:
 	{
-
-
 		if(timer_flag[1])
 		{
 			set_Timer(1);
@@ -149,8 +137,6 @@ void fsm_for_input_processing(void)
 			return;
 		}
 
-
-
 		return;
 	}
 	case SETT:
@@ -178,8 +164,6 @@ void fsm_for_input_processing(void)
 			return;
 		}
 
-
-
 		if(is_button_pressed(1))
 		{
 			reset(1);
@@ -197,7 +181,6 @@ void fsm_for_input_processing(void)
 			GPIOA->ODR = (0x1249<<(prev_mode));
 			return;
 		}
-
 
 		return;
 	}
