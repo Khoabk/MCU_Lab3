@@ -6,19 +6,12 @@
 
 
 
- State prev_mode = NORMAL;
- State current_state= NORMAL;
-
-//State prev_mode = MODE1;
-//State current_state= MODE1;
-
-
-
+State prev_mode = NORMAL;
+State current_state= NORMAL;
 
 static int set =0;
 static int incre_flag=0;
 
-//static int firts =0;
 
 void fsm_for_input_processing(void)
 {
@@ -187,7 +180,5 @@ void fsm_for_input_processing(void)
 	default: break;
 
 	}
-
-
 
 }
